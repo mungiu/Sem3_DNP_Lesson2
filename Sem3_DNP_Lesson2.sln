@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathLib", "MathLib\MathLib.csproj", "{4EAB1E82-E760-4F3F-9131-C053F20E0F23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestMyMathLib", "TestMyMathLib\TestMyMathLib.csproj", "{633FAD78-CDBC-4C80-80D9-1EFF377B27C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolymorphismLybrary", "PolymorphismLybrary\PolymorphismLybrary.csproj", "{6E9BDDCF-6C66-401C-9B28-5CD96DC2390B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestPolymorphismLibrary", "TestPolymorphismLibrary\TestPolymorphismLibrary.csproj", "{00A3DABC-19AE-462E-91DB-C3CA84CCAB4B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4EAB1E82-E760-4F3F-9131-C053F20E0F23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EAB1E82-E760-4F3F-9131-C053F20E0F23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EAB1E82-E760-4F3F-9131-C053F20E0F23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EAB1E82-E760-4F3F-9131-C053F20E0F23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{633FAD78-CDBC-4C80-80D9-1EFF377B27C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{633FAD78-CDBC-4C80-80D9-1EFF377B27C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{633FAD78-CDBC-4C80-80D9-1EFF377B27C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{633FAD78-CDBC-4C80-80D9-1EFF377B27C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E9BDDCF-6C66-401C-9B28-5CD96DC2390B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E9BDDCF-6C66-401C-9B28-5CD96DC2390B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E9BDDCF-6C66-401C-9B28-5CD96DC2390B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E9BDDCF-6C66-401C-9B28-5CD96DC2390B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00A3DABC-19AE-462E-91DB-C3CA84CCAB4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00A3DABC-19AE-462E-91DB-C3CA84CCAB4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00A3DABC-19AE-462E-91DB-C3CA84CCAB4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00A3DABC-19AE-462E-91DB-C3CA84CCAB4B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {95AA3011-752D-48B4-9A91-C42127BB3DAF}
+	EndGlobalSection
+EndGlobal
