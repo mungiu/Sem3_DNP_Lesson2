@@ -4,15 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PolymorphismLybrary 
+namespace PolymorphismLybrary
 {
     class PartTimeStudent : PartTimeEmployee, IStudent
     {
-        public PartTimeStudent(string name, int hoursPerMonth, double hourlyWage) : base(name, hoursPerMonth, hourlyWage)
-        {
+        int year;
 
+        public PartTimeStudent(string name, int hoursPerMonth, double hourlyWage, int year) : base(name, hoursPerMonth, hourlyWage)
+        {
+            Register(year);
         }
 
-        public
+        public void Register(int year) { this.year = year; }
     }
 }

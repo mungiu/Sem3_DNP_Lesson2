@@ -11,7 +11,7 @@ namespace PolymorphismLybrary
         double totalSalary;
         List<Employee> employeeList = new List<Employee>();
 
-        public void getMonthlySalaryTotal()
+        public void GetMonthlySalaryTotal()
         {
             foreach (Employee employee in employeeList)
                 totalSalary += employee.GetMonthlySalary();
@@ -19,14 +19,19 @@ namespace PolymorphismLybrary
             Console.WriteLine(totalSalary);
         }
 
-        public void employNewEmployee(string name, double monthlySalary)
+        public void EmployNewEmployee(string name, double monthlySalary)
         {
             employeeList.Add(new FullTimeEmployee(monthlySalary, name));
         }
 
-        public void employNewEmployee(string name, int hoursPerMonth, double hourlyWage)
+        public void EmployNewEmployee(string name, int hoursPerMonth, double hourlyWage)
         {
             employeeList.Add(new PartTimeEmployee(name, hoursPerMonth, hourlyWage));
+        }
+
+        public void EmployPartTimeStudent(string name, int hoursPerMonth, double hourlyWage, int year)
+        {
+            employeeList.Add(new PartTimeStudent(name, hoursPerMonth, hourlyWage, year));
         }
     }
 }

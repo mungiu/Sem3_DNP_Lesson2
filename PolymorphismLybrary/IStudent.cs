@@ -8,10 +8,6 @@ namespace PolymorphismLybrary
 {
     public interface IStudent
     {
-        
+        void Register(int year);
     }
-
-    void Register(int year);
-
-
 }

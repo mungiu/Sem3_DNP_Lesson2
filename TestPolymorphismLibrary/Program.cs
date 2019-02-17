@@ -12,9 +12,10 @@ namespace TestPolymorphismLibrary
         {
             PolymorphismLybrary.Company company = new PolymorphismLybrary.Company();
 
-            company.employNewEmployee("juan",1,10);
-            company.employNewEmployee("rick", 10);
-            company.getMonthlySalaryTotal();
+            company.EmployNewEmployee("juan",1,10);
+            company.EmployNewEmployee("rick", 10);
+            company.EmployPartTimeStudent("andrei", 43, 122, 2018);
+            company.GetMonthlySalaryTotal();
 
             Console.ReadKey();
         }

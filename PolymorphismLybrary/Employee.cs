@@ -1,6 +1,6 @@
 ﻿namespace PolymorphismLybrary
 {
-    internal abstract class Employee :IStudent
+    internal abstract class Employee
     {
         public string name;
 
