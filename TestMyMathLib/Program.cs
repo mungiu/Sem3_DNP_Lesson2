@@ -12,7 +12,7 @@ namespace TestMyMathLib
         {
             Console.WriteLine("hey students");
 
-            MyNamespace.MyMathLibClass myMathLib = new MyNamespace.MyMathLibClass();
+            MathLibDll.MathLib myMathLib = new MathLibDll.MathLib();
 
             int result = myMathLib.Add(2, 3);
 
