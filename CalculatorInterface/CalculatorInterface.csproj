@@ -84,6 +84,10 @@
       <Project>{4eab1e82-e760-4f3f-9131-c053f20e0f23}</Project>
       <Name>MathLib</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Serializer_Deserializer_Lib\SerializeDeserializeLib.csproj">
+      <Project>{d8b0ce29-0f62-4ae2-8e68-af230e37cd59}</Project>
+      <Name>SerializeDeserializeLib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
