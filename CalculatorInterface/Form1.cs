@@ -70,32 +70,59 @@ namespace CalculatorInterface
 
         private void saveToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
+            //SaveFileDialog ofd = new SaveFileDialog();
+            //ofd.Filter = "XML Files|*.xml|All files (*.*)|*.*";
+            //DialogResult dr = ofd.ShowDialog();
+
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
-                XElement element = new XElement("Items");
+                //string filename = ofd.FileName;
+                XmlWriter xmlWriter = XmlWriter.Create(saveFileDialog.FileName);
+
+
+                xmlWriter.WriteStartDocument();
+                xmlWriter.WriteStartElement("Items");
+
                 foreach (var item in listBox1.Items)
                 {
-                    element.Add(new XElement("Name", item));
+                    xmlWriter.WriteStartElement("Name");
+                    xmlWriter.WriteString(item.ToString());
+                    xmlWriter.WriteEndElement();
                 }
-                XDocument document = new XDocument();
-                document.Add(element);
-                document.Save(saveFileDialog.FileName, SaveOptions.None);
+
+                xmlWriter.WriteEndDocument();
+                xmlWriter.Close();
             }
+
+            //if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            //{
+            //    XElement element = new XElement("Items");
+            //    foreach (var item in listBox1.Items)
+            //    {
+            //        element.Add(new XElement("Name", item));
+            //    }
+            //    XDocument document = new XDocument();
+            //    document.Add(element);
+            //    document.Save(saveFileDialog.FileName, SaveOptions.None);
+            //}
         }
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                XmlDocument xm = new XmlDocument();
-                string list = "//Name";
 
-                xm.Load(openFileDialog.Title.ToString());
-                XmlNodeList Xn = xm.SelectNodes(list);
-
-                foreach (XmlNode xNode in Xn)
+                using (XmlReader reader = XmlReader.Create(openFileDialog.FileName))
                 {
-                    listBox1.Items.Add(xNode.InnerText);
+                    reader.ReadStartElement("Items");
+
+                    while (reader.Name == "Name")
+                    {
+                        XElement el = (XElement)XNode.ReadFrom(reader);
+                        listBox1.Items.Add(el.Value);
+                    }
+
+                    reader.ReadEndElement();
                 }
             }
         }
